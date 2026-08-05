@@ -16,7 +16,7 @@ os.makedirs(DIST)
 for f in glob.glob(os.path.join(SITE_ROOT, '*.html')):
     shutil.copy2(f, DIST)
 
-# HTML files in subdirectories (services/, etc.)
+# HTML files in subdirectories (services/, service-area/, etc.)
 for f in glob.glob(os.path.join(SITE_ROOT, '**', '*.html'), recursive=True):
     if 'node_modules' in f or os.path.abspath(f).startswith(DIST):
         continue
@@ -30,7 +30,7 @@ images_src = os.path.join(SITE_ROOT, 'images')
 images_dst = os.path.join(DIST, 'images')
 os.makedirs(images_dst, exist_ok=True)
 for f in os.listdir(images_src):
-    if f == 'README.md':
+    if f.endswith('.md'):
         continue
     src = os.path.join(images_src, f)
     if os.path.isfile(src):
