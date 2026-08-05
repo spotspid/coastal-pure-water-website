@@ -2,7 +2,7 @@ import sharp from 'sharp';
 import toIco from 'to-ico';
 import { writeFileSync } from 'fs';
 
-// Water-drop mark: bold single shape, fill #007BC1 on white rounded-square.
+// Water-drop mark: bold single shape, fill #0E7C8B on white rounded-square.
 // ViewBox 100x100. Teardrop: tip at (50,15), semicircle center at (50,62) r=25.
 // Shape height: 15 to 87 = 72px = ~72% of canvas.
 // At 16px that is ~11.5px tall and ~8px wide - legible as a solid drop.
